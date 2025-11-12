@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ Full Header Wrapper */
+.full-header {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* ✅ Top Bar */
+.top-bar {
+  background-color: #072103;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.top-bar i {
+  margin-right: 6px;
+}
+
+/* ✅ Main Header */
+.main-header {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.logo img {
+  height: 60px; /* Keep this as is to not increase height */
+  width: auto;  /* Allows proportional scaling */
+  max-width: 200px; /* You can increase this if needed */
+  object-fit: contain;
+  margin: 0;
+  padding: 8px 40px;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2E7D32;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #8B5E3C;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
