@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Display selected file name below the upload button */
+.file-name {
+    color: #ccc;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f0f2;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #023047;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ffb703;
+}
+
+/* Remove white box background from profile upload */
+.upload-form.profile-form {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Upload buttons */
+#file-upload {
+    display: none;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background-color: #219ebc;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-file-label:hover {
+    background-color: #08495c;
+}
+
+.upload-btn {
+    background-color: #126782;
+    color: #fdfefe;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-btn:hover {
+    background-color: #025c68;
+}
+
+.sidebar h2 {
+    color: #ffb703;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #219ebc;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    flex-grow: 1;
+    width: calc(100% - 250px);
+}
+
+h2 {
+    text-align: center;
+    color: #05668d;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #028090;
+    border-left: 5px solid #02c39a;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+.appointments {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.appointments table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointments th,
+.appointments td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+}
+
+.appointments th {
+    background: #e7f4ec;
+    color: #023e8a;
+}
+
+tr:hover {
+    background-color: #f1fdfb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: static;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar a, .upload-btn, .custom-file-label {
+        width: auto;
+        margin: 5px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .appointments table, .appointments th, .appointments td {
+        font-size: 13px;
+    }
+}
