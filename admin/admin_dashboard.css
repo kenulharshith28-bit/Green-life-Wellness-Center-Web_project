@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Selected file name below button */
+.file-name {
+    color: #ccc;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f0f2;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #023047;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ffb703;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffb703;
+    font-size: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #219ebc;
+}
+
+/* Profile Upload Form */
+.upload-form {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#file-upload {
+    display: none;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background-color: #219ebc;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-file-label:hover {
+    background-color: #126782;
+}
+
+.upload-btn {
+    background-color: #ffb703;
+    color: #023047;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-btn:hover {
+    background-color: #fca311;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    flex-grow: 1;
+    width: calc(100% - 250px);
+}
+
+/* Welcome header */
+.header {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #023047;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #05668d;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #028090;
+    border-left: 5px solid #02c39a;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+/* Total Overview Summary Section */
+.summary-section {
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.summary-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #05668d;
+    font-weight: 600;
+    border-left: 5px solid #02c39a;
+    padding-left: 10px;
+}
+
+.summary-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.summary-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.summary-box h4 {
+    color: #023047;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.summary-box p {
+    color: #38b000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Forms */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="submit"],
+button {
+    background-color: #05668d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #028090;
+}
+
+/* Feedback Table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+}
+
+th {
+    background-color: #caf0f8;
+    color: #023e8a;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #edf6f9;
+}
+
+p {
+    color: #38b000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.message.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .sidebar a,
+    .upload-btn,
+    .custom-file-label {
+        margin: 5px;
+        width: auto;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .summary-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary-box {
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 13px;
+    }
+}
+/* Remove white box background from profile upload */
+.profile-form {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}

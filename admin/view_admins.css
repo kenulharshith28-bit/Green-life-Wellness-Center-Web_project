@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f0f2;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    text-align: center;
+    width: 250px;
+    background-color: #023047;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffb703;
+    font-size: 24px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #219ebc;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 50px 40px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+h1 {
+    color: #05668d;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 3px solid #02c39a;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 15px;
+}
+
+th {
+    background-color: #caf0f8;
+    color: #023e8a;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #edf6f9;
+}
+
+td a {
+    color: #d11a2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid #219ebc;
+}
+
+/* Optional success or alert messages */
+p.success {
+    color: #38b000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.alert {
+    color: #e63946;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    table, th, td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    td img {
+        width: 32px;
+        height: 32px;
+    }
+}
